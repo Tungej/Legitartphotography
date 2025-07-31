@@ -152,6 +152,58 @@
             font-style: italic;
             color: rgba(255, 255, 255, 0.9);
         }
+        /* Dropdown Styles */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        nav ul li.dropdown:hover ul {
+            display: block;
+        }
+        nav ul li.dropdown ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 20px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: background 0.3s;
+            position: relative;
+        }
+        nav ul li.dropdown ul li a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        nav ul li.dropdown ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 5px;
+            left: 20px;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        nav ul li.dropdown ul li a:hover:after {
+            width: calc(100% - 40px);
+        }
+        nav ul li.dropdown a i {
+            font-size: 10px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
         /* Hero Section */
         .hero {
             padding: 80px 20px;
@@ -635,6 +687,16 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#gallery">Gallery <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="weddings.html">Weddings</a></li>
+                        <li><a href="engagement.html">Engagement</a></li>
+                        <li><a href="outdoor.html">Outdoor</a></li>
+                        <li><a href="indoor.html">Indoor</a></li>
+                        <li><a href="video.html">Video</a></li>
+                    </ul>
+                </li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
